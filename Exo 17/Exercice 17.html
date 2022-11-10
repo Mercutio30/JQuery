@@ -1,0 +1,44 @@
+<!doctype html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+ <title>jQuery Stopper les animations en cours d'exécution</title>
+<script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+<style>
+p{background-color:#0d76bc;}
+ img{
+ position: relative; /* Required to move element */
+ }
+</style>
+<script>
+$(document).ready(function(){
+ // Démarrer l'animation
+ $(".start-btn").click(function(){
+ $("img").animate({left: "+=2000px"}, 2000);
+});
+ // Stopper l'animation en cours
+ $(".stop-btn").click(function(){
+ $("img").stop();
+ });
+
+ // Démarrer l'animation dans la direction opposée
+ $(".back-btn").click(function(){
+ $("img").animate({left: "-=2000px"}, 2000);
+ });
+ // Remise à zéro
+ $(".reset-btn").click(function(){
+ $("img").animate({left: "0"}, "fast");
+ });
+});
+</script>
+</head>
+<body>
+ <button type="button" class="start-btn">Démarrer</button>
+ <button type="button" class="stop-btn">Stopper</button>
+ <button type="button" class="back-btn">Retour</button>
+ <button type="button" class="reset-btn">Effacer</button>
+ <p>
+ <img src="https://www.oujood.com/images/nuage.png" alt="Nuage">
+ </p>
+</body>
+</html>

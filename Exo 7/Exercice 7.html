@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<title>jQuery Masquer, afficher un paragraphe</title>
+<script src="http://code.jquery.com/jquery-latest.js""></script>
+<script >
+$(document).ready(function(){
+$("#hide").click(function(){
+$("p").hide();
+});
+$("#show").click(function(){
+$("p").show();
+});
+});
+</script>
+</head>
+<body>
+<p>Si vous cliquez sur le bouton "Hide" ce paragraphe
+disparu, <br />
+il reaparetra si vous cliquez sur le bouton "show" .</p>
+<button id="hide">Hide</button>
+<button id="show">Show</button>
+</body>
+</html>

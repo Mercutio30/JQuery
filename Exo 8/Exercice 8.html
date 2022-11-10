@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+ <html lang="en">
+ <head>
+ <title>jQuery cacher et afficher</title>
+ <meta charset="utf-8">
+ <script src="http://code.jquery.com/jquery-latest.js""></script>
+ <script >
+ $(document).ready(function(){
+ $("#hide").click(function(){
+ $("p").hide("slow");
+ });
+ $("#show").click(function(){
+ $("p").show(2000);
+ });
+ });
+ </script>
+ </head>
+ <body>
+ <p>un click sur le bouton "Hide" fait disparaître ce paragraphe, <br />
+ et un click sur le bouton "show" le fait réapparaître.</p>
+ <button id="hide">Hide</button>
+ <button id="show">Show</button>
+ </body>
+ </html>
